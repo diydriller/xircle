@@ -2,6 +2,7 @@ const express=require('express');
 const path=require('path');
 const compression=require('compression');
 const cors=require('cors');
+var db = require('./db')
 require('dotenv').config();
 
 const app=express();
@@ -13,6 +14,12 @@ app.use(express.urlencoded({extended: true}));
 app.use(cors());
 
 require('./src/routers/chatRouter')(app);
+require('./src/routers/commentRouter')(app);
+require('./src/routers/hashtagRouter')(app);
+require('./src/routers/photoRouter')(app);
+require('./src/routers/postRouter')(app);
+require('./src/routers/userRouter')(app);
+
 
 
 app.get('/',(req,res)=>{
