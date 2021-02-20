@@ -12,6 +12,8 @@ const UserSchema = new mongoose.Schema({
     nickname : {type:String, unique:true}, // ex) @smp_2103 같은 아이디
     email : {type:String,unique:true}, // 인증에 사용할 이메일
     location : String, // 서울특별시 서초구
+    lat : Number,
+    lng : Number,
     university: String, // 연세대학교 , 고려대학교 등
     createdAt : {type:Date , default: Date.now},
     my_hashtags : [
