@@ -3,7 +3,7 @@ var mongoose = require('mongoose')
 const HashtagSchema = new mongoose.Schema({
 
     title : String,
-
+    createdAt : {type:Date , default: Date.now},
     userId : [
         {
             type: mongoose.Schema.Types.ObjectId,

@@ -5,6 +5,8 @@ const PostSchema = new mongoose.Schema({
     
     content : String,
 
+    createdAt : {type:Date , default: Date.now},
+
     uploaded_Photo : [
         {
             type: mongoose.Schema.Types.ObjectId,
