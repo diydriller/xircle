@@ -13,7 +13,7 @@ const UserSchema = new mongoose.Schema({
     email : {type:String,unique:true}, // 인증에 사용할 이메일
     location : String, // 서울특별시 서초구
     university: String, // 연세대학교 , 고려대학교 등
-    createdAt : {type:Date , default: Date.now}
+    createdAt : {type:Date , default: Date.now},
     my_hashtags : [
         {
             type: mongoose.Schema.Types.ObjectId,
