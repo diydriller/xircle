@@ -6,7 +6,7 @@ exports.getHashtag=async(req,res,next)=>{
         return res.json({
             code:200,
             success:true,
-            message: hashtag.length !== 0 ?  hashtag : "데이터 없음"
+            data: hashtag.length !== 0 ?  hashtag : "데이터 없음"
         });
 
     }

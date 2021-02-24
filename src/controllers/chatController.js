@@ -5,7 +5,7 @@ exports.getChat=async(req,res,next)=>{
         return res.json({
             code:200,
             success:true,
-            message:'채팅 조회 성공'
+            data:'채팅 조회 성공'
         });
 
     }

@@ -8,7 +8,7 @@ mongoose.connect(process.env.MONGO_URL, {
   useNewUrlParser: true,
   useFindAndModify: false,
   useUnifiedTopology: true,
-});
+})
 
 const db = mongoose.connection;
 
@@ -17,3 +17,4 @@ const handleError = () => console.log(`❌ Error on DB Connection:${error}`);
 
 db.once("open", handleOpen);
 db.on("error", handleError);
+

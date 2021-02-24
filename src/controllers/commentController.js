@@ -6,7 +6,7 @@ exports.getComment=async(req,res,next)=>{
         return res.json({
             code:200,
             success:true,
-            message: comment.length !== 0 ? comment : "데이터 없음"
+            data: comment.length !== 0 ? comment : "데이터 없음"
         });
 
     }
